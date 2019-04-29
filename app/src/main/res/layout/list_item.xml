@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_card_view"
+        android:layout_margin="@dimen/margin_card_view">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_width="@dimen/size_picture_movie"
+                android:layout_height="@dimen/size_picture_movie" app:srcCompat="@drawable/icon"
+                android:id="@+id/iPicture"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="@string/moviename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="25dp"
+                android:id="@+id/tName"
+                app:layout_constraintStart_toEndOf="@+id/iPicture" app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@android:color/black" android:textSize="20dp"/>
+        <TextView
+                android:text="@string/votos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="64dp"
+                android:id="@+id/tVote" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iPicture"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
